@@ -1,0 +1,18 @@
+# Galactic Drone Delivery System
+
+## Project Overview
+This is a small Java project that simulates a cargo delivery system in space. Drones move cargo between planets and space stations. The project follows **OOP principles** (Object-Oriented Programming) like Encapsulation, Inheritance, and Polymorphism.
+
+## Features
+* **Celestial Bodies:** Supports Planets and Space Stations with coordinates.
+* **Drones:** Two types of drones — **LightDrone** (fast, low payload) and **HeavyDrone** (slow, high payload).
+* **Dispatcher:** A logic system that assigns tasks to drones and checks weight limits and drone status.
+* **Task Tracking:** Every delivery has a state (Created, Assigned, Done).
+
+## Project Structure
+The project uses a standard **Maven** layout:
+* `edu.narxoz.galactic.bodies` — Classes for space objects.
+* `edu.narxoz.galactic.drones` — Drone logic and types.
+* `edu.narxoz.galactic.cargo` — Information about the cargo.
+* `edu.narxoz.galactic.task` — Delivery task management.
+* `edu.narxoz.galactic.dispatcher` — System for assigning and completing tasks.
