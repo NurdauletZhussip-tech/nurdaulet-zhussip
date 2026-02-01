@@ -1,18 +1,10 @@
-# Galactic Drone Delivery System
-
-## Project Overview
-This is a small Java project that simulates a cargo delivery system in space. Drones move cargo between planets and space stations. The project follows **OOP principles** (Object-Oriented Programming) like Encapsulation, Inheritance, and Polymorphism.
-
-## Features
-* **Celestial Bodies:** Supports Planets and Space Stations with coordinates.
-* **Drones:** Two types of drones — **LightDrone** (fast, low payload) and **HeavyDrone** (slow, high payload).
-* **Dispatcher:** A logic system that assigns tasks to drones and checks weight limits and drone status.
-* **Task Tracking:** Every delivery has a state (Created, Assigned, Done).
-
-## Project Structure
-The project uses a standard **Maven** layout:
-* `edu.narxoz.galactic.bodies` — Classes for space objects.
-* `edu.narxoz.galactic.drones` — Drone logic and types.
-* `edu.narxoz.galactic.cargo` — Information about the cargo.
-* `edu.narxoz.galactic.task` — Delivery task management.
-* `edu.narxoz.galactic.dispatcher` — System for assigning and completing tasks.
+Данный проект представляет собой систему управления автоматизированной доставкой грузов
+в космическом пространстве, реализованную на языке Java с применением объектно-ориентированного подхода.
+В основе архитектуры лежат четыре базовых принципа ООП. Инкапсуляция реализована через использование приватных полей и строгий контроль
+доступа к ним с помощью геттеров и сеттеров, что гарантирует целостность данных и предотвращает некорректные изменения состояний объектов,
+таких как статус дрона или стадия выполнения задачи. Наследование применяется для создания иерархий небесных тел, где абстрактный класс CelestialBody объединяет
+общую логику координат для планет и космических станций, а также для дронов, где базовый класс Drone определяет общие характеристики грузоподъемности.
+Полиморфизм реализован через абстрактный метод расчета скорости, который переопределяется в классах LightDrone и HeavyDrone, позволяя системе рассчитывать время доставки динамически,
+работая с объектами через базовые ссылки. Основная бизнес-логика сосредоточена в классе Dispatcher,
+который выступает в роли контроллера: он проверяет доступность дрона,
+соответствие веса груза техническим характеристикам аппарата и корректность текущего статуса задачи перед назначением.
