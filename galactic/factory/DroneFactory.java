@@ -1,13 +1,10 @@
 package edu.narxoz.galactic.factory;
-import edu.narxoz.galactic.drones.Drone;
-import edu.narxoz.galactic.drones.HeavyDrone;
-import edu.narxoz.galactic.drones.LightDrone;
+import edu.narxoz.galactic.drones.*;
+
 public class DroneFactory {
-    public static Drone createDrone(String id, double maxPayload) {
-        if (maxPayload <= 50.0) {
-            return new LightDrone(id, maxPayload);
-        } else {
-            return new HeavyDrone(id, maxPayload);
+    public static Drone getAutomaticDrone(double weight) {
+        if (weight <= 50){return new LightDrone("Auto-Light-" + (int)(Math.random() * 100), 50.0);
+        }else{
+            return new HeavyDrone("Auto-Heavy-" + (int)(Math.random() * 100), 500.0);
         }
-    }
-}
+    }}
